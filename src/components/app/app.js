@@ -1,16 +1,23 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
-import { ProvideAuth } from '../../hooks';
 import Header from '../header';
+import CharacterList from '../character-list';
+import Character from '../character';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
+
+
 const App = () => {
+
   return (
-    <ProvideAuth>
+    <>
       <Header /> 
-    </ProvideAuth>
+      <Route path="/characters/" exact component={CharacterList} />
+      <Route path="/characters/:id" component={Character} />
+    </>
   );
 }
 

@@ -1,0 +1,9 @@
+.item {
+  width: 200px;
+  margin: 10px 0px;
+  transition: .1s;
+}
+
+.item:hover {
+  background-color: rgba(100, 100, 100, .1);
+}
