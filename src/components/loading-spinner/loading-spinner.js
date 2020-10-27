@@ -7,7 +7,7 @@ const LoadingSpinner = () => {
     <Spinner 
       animation="border" 
       role="status" 
-      style={{ marginLeft: '50%', marginTop: '100px'}}
+      style={{ marginLeft: '50%', marginTop: '100px', marginBottom: '100px' }}
     >
       <span className="sr-only">Loading...</span>
     </Spinner>    

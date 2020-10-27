@@ -72,9 +72,95 @@ const getCharacterById = gql`
   } 
 `;
 
+const getEpisodesInfo = gql`
+  query getEpisodesInfo {
+    episodes {
+      info {
+        count
+        pages
+      }
+    }
+  }
+`;
+
+const getEpisodes = gql`
+  query getEpisodes($page: Int) {
+    episodes(page: $page) {
+      results {
+        id
+        name
+        created
+      }
+    }
+  }
+`;
+
+const getEpisodeById = gql`
+  query getEpisodeById($id: ID!) {
+    episode(id: $id) {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        image
+      }
+      created
+    }
+  }
+`;
+
+const getLocationsInfo = gql`
+  query getLocationsInfo {
+    locations {
+      info {
+        count
+        pages
+      }
+    }
+  }
+`;
+
+const getLocations = gql`
+  query getLocations($page: Int) {
+    locations(page: $page) {
+      results {
+        id 
+        name
+        created
+      }
+    }
+  }
+`;
+
+const getLocationById = gql`
+  query getLocationById($id: ID!) {
+    location(id: $id) {
+      id
+      name
+      type
+      dimension
+      residents {
+        id
+        name
+        image
+      }
+      created
+    }
+  }
+`;
+
 export {
   getCharacters,
   getCharactersInfo,
   getCharacterById,
+  getEpisodesInfo,
+  getEpisodes,
+  getEpisodeById,
+  getLocationsInfo,
+  getLocations,
+  getLocationById,
 };
 

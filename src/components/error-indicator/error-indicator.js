@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Alert from 'react-bootstrap/Alert';
 
@@ -11,6 +12,10 @@ const ErrorIndicator = ({ errorMessage }) => {
       <p> { errorMessage } </p>
     </Alert>
   );
+};
+
+ErrorIndicator.propTypes = {
+  errorMessage: PropTypes.string,
 };
 
 export default ErrorIndicator;

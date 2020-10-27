@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 
 import Container from 'react-bootstrap/Container';
@@ -8,7 +9,7 @@ import Item from '../item';
 import LoadingSpinner from '../loading-spinner';
 import './item-list.css';
 
-const ItemList = ({ page, query }) => {
+const ItemList = ({ page, query, label }) => {
   const { loading, error, data } = useQuery(query, { 
     variables: { page }
   });
@@ -23,9 +24,9 @@ const ItemList = ({ page, query }) => {
     return <ErrorIndicator errorMessage={ error.message } />
   }
 
-  const characters = data.characters.results;
+  const items = data[label].results;
 
-  const items = characters.map((item) => {
+  const itemsArr = items.map((item) => {
     return (
       <Item 
         key={item.id} 
@@ -38,9 +39,15 @@ const ItemList = ({ page, query }) => {
 
   return (
     <Container className="d-flex item-list">
-      { items }
+      { itemsArr }
     </Container>
   );
+};
+
+ItemList.propTypes = { 
+  page: PropTypes.number.isRequired, 
+  query: PropTypes.object.isRequired, 
+  label: PropTypes.string.isRequired, 
 };
 
 export default ItemList;
