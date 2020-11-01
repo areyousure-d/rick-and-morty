@@ -1,0 +1,8 @@
+.image-link {
+  flex: 0 0 20%;
+  min-width: 100px;
+}
+
+.image-link img {
+  width: 100%;
+}

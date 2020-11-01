@@ -25,11 +25,11 @@ const EmailSignToggle = ({ handleShowSignin, handleShowSignup }) => {
   return (
     <>
       { auth.getAccessToken()
-        ? <Row expand="sm">
+        ? <Row style={{ flexWrap: 'nowrap', }}>
             <Card className="mr-2 p-2">{ email }</Card>
             <Button variant="secondary" onClick={signoutHandler}>Выйти</Button>
           </Row>
-        : <Row expand="sm">
+        : <Row style={{ flexWrap: 'nowrap', }}>
             <Button className="mr-2" onClick={handleShowSignin}>Signin</Button>
             <Button className="mr-2" onClick={handleShowSignup}>Signup</Button>
           </Row>

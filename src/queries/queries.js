@@ -72,6 +72,15 @@ const getCharacterById = gql`
   } 
 `;
 
+const getCharacterImage = gql`
+  query getCharacterImage($id: ID!) {
+    character(id: $id) {
+      name
+      image
+    }
+  }
+`;
+
 const getEpisodesInfo = gql`
   query getEpisodesInfo {
     episodes {
@@ -156,6 +165,7 @@ export {
   getCharacters,
   getCharactersInfo,
   getCharacterById,
+  getCharacterImage,
   getEpisodesInfo,
   getEpisodes,
   getEpisodeById,

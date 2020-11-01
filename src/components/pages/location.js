@@ -25,7 +25,6 @@ const Location = () => {
   }
 
   const {
-    id,
     name,
     type,
     dimension,

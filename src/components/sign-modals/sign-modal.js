@@ -121,7 +121,7 @@ const SignModal = ({ show, onHide, isSignupModal, label }) => {
               className="mr-2" 
               variant="secondary" 
               type="reset"
-            >Очистить</Button>
+            >Reset</Button>
             <Button variant="primary" type="submit">{ label }</Button>
           </Form.Group>
         </Form>

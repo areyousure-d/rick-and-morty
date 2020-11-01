@@ -7,7 +7,7 @@ const Signin = ({ show, onHide }) => {
       show={show} 
       onHide={onHide}
       isSignupModal={false} 
-      label="Войти" 
+      label="Signin" 
     />
   );
 };

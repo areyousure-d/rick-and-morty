@@ -25,7 +25,6 @@ const Episode = () => {
   }
 
   const {
-    id,
     name,
     air_date,
     episode,
