@@ -26,7 +26,7 @@ const ItemPageLayout = ({ image, info, list, listName, }) => {
           <Accordion>
             <Card>
               <Card.Header>
-                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                <Accordion.Toggle as={Button} variant="info" eventKey="0">
                   { listName } 
                 </Accordion.Toggle>  
               </Card.Header>

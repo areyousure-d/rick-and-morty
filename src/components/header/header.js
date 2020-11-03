@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
   <>
-    <Navbar collapseOnSelect bg="dark" variant="dark" expand="md" >
+    <Navbar collapseOnSelect bg="dark" variant="dark" expand="md" className="header" >
     <Container expand="md" className="d-flex" style={{ flexWrap: 'wrap' }}>
       <Navbar.Brand>
         <Link className="nav-link text-primary" to="/">Rick and Morty</Link>

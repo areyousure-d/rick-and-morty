@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { 
   ApolloClient, 
   InMemoryCache, 
@@ -18,7 +18,7 @@ const client = new ApolloClient({
 ReactDOM.render(
   <ApolloProvider client={client}>
     <ProvideAuth>
-      <Router>
+      <Router basename="/">
         <App />
       </Router>
     </ProvideAuth>

@@ -27,12 +27,24 @@ const ItemList = ({ page, query, label }) => {
   const items = data[label].results;
 
   const itemsArr = items.map((item) => {
+    let name;
+    if (item.episode) {
+      name = (
+        <>
+          <p className="text-success">{ item.episode }</p>
+          <p> {item.name }</p>
+        </>
+      );
+    } else {
+      name = item.name;
+    }
+
     return (
       <Item 
         key={item.id} 
         id={item.id} 
         image={item.image} 
-        name={item.name} 
+        name={name} 
       />
     );
   });

@@ -98,7 +98,7 @@ const getEpisodes = gql`
       results {
         id
         name
-        created
+        episode
       }
     }
   }

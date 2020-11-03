@@ -8,6 +8,7 @@ import { getCharacterById } from '../../queries';
 import ErrorIndicator from '../error-indicator';
 import LoadingSpinner from '../loading-spinner';
 import ItemPageLayout from '../item-page-layout';
+import { formatDate } from '../../util';
 
 const Character = () => {
   const params = useParams();
@@ -35,6 +36,8 @@ const Character = () => {
     created,
   } = data.character; 
 
+  const formattedCreated = formatDate(created);
+
   const Info = (
     <>
       <h2>{ name }</h2>
@@ -58,7 +61,7 @@ const Character = () => {
           : 'unknown'
         }
       </p>
-      <p>Created: { created }</p>
+      <p>Created: { formattedCreated }</p>
     </>
   );
 
@@ -67,12 +70,15 @@ const Character = () => {
       <Link 
         key={e.id} 
         to={`/episodes/${e.id}`}
-      > { e.name } </Link>))
+        className="btn btn-outline-secondary btn-sm"
+        role="button"
+        style={{ margin: '2px' }}
+      > { e.episode + " " + e.name } </Link>))
   );
 
   const characterImage = (
     <Image 
-      style={{ height: '300px' }} 
+      style={{ height: '280px', width: '280px' }} 
       src={data && image } 
     />
   );

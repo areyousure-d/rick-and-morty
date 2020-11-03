@@ -11,7 +11,7 @@ import ImageLink from '../image-link';
 import './image-link-list.css';
 
 const ImageLinkList = () => {
-  const { loading, error, data } = useQuery(getCharactersInfo);
+  const { loading, error, } = useQuery(getCharactersInfo);
   const [charactersId, setCharactersId] = useState([]);
   const [randomIndex, setRandomIndex] = useState(0);
   const imagesNumber = 10;

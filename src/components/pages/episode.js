@@ -8,6 +8,7 @@ import LoadingSpinner from '../loading-spinner';
 import ErrorIndicator from '../error-indicator';
 import ItemPageLayout from '../item-page-layout';
 import { getEpisodeById } from '../../queries';
+import { formatDate } from '../../util';
 
 const Episode = () => {
   const params = useParams();
@@ -32,12 +33,14 @@ const Episode = () => {
     created,
   } = data.episode;
 
+  const formattedCreated = formatDate(created);
+
   const Info = (
     <>
       <h2>Episode: { name }</h2>
       <p>The air date of the episode: { air_date }</p>
       <p>Code of the episode: { episode }</p>
-      <p>Created: { created }</p>
+      <p>Created: { formattedCreated }</p>
     </>
   );
 

@@ -8,6 +8,7 @@ import LoadingSpinner from '../loading-spinner';
 import ErrorIndicator from '../error-indicator';
 import ItemPageLayout from '../item-page-layout';
 import { getLocationById } from '../../queries';
+import { formatDate } from '../../util';
 
 const Location = () => {
   const params = useParams();
@@ -32,12 +33,14 @@ const Location = () => {
     created,
   } = data.location;
 
+  const formattedCreated = formatDate(created);
+
   const Info = (
     <>
       <h2>Location: { name }</h2>
       <p>The type of location: { type }</p>
       <p>The dimension in which the location is located: { dimension }</p>
-      <p>Created: { created }</p>
+      <p>Created: { formattedCreated }</p>
     </>
   );
 
