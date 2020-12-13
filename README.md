@@ -5,4 +5,4 @@
 Данные берутся с [https://rickandmortyapi.com/graphql/](https://rickandmortyapi.com/graphql/)
 Для работы с graphql использован [apollo](https://www.apollographql.com/).
 
-Работающий пример можно посмотреть тут: [https://areyousure92.github.io/rick-and-morty/#/](https://areyousure92.github.io/rick-and-morty/#/)
+Работающий пример можно посмотреть тут: [https://areyousure-d.github.io/rick-and-morty/#/](https://areyousure-d.github.io/rick-and-morty/#/)
